@@ -12,32 +12,26 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Set up JDK 17
-        uses: actions/setup-java@v3
+        uses: actions/setup-java@v4
         with:
           distribution: 'temurin'
           java-version: '17'
 
-      - name: Cache Gradle packages
-        uses: actions/cache@v3
-        with:
-          path: |
-            ~/.gradle/caches
-            ~/.gradle/wrapper/
-          key: ${{ runner.os }}-gradle-${{ hashFiles('**/*.gradle*', '**/gradle-wrapper.properties') }}
-          restore-keys: |
-            ${{ runner.os }}-gradle-
+      - name: Set up Gradle
+        uses: gradle/actions/setup-gradle@v4
 
-      - name: Run Gradle
-        run: ./gradlew clean license check assembleRelease --no-daemon
+      # Public CI must not require or expose the private RuStore signing key.
+      - name: Run checks and build debug APKs
+        run: ./gradlew clean license check assembleDebug --no-daemon
 
       - name: Upload APKs
         if: github.event_name == 'pull_request'
         uses: actions/upload-artifact@v4
         with:
-          name: FairScan-APKs-PR-${{ github.event.pull_request.number }}
+          name: DocSScaner-debug-APKs-PR-${{ github.event.pull_request.number }}
           path: |
-            app/build/outputs/apk/release/*.apk
+            app/build/outputs/apk/debug/*.apk
           retention-days: 30

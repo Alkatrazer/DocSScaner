@@ -10,8 +10,10 @@
 </p>
 
 <p align="center">Version 1.0 · Developed by <b>Alkatrazer</b></p>
-<p align="center">Based on <a href="https://github.com/pynicolas/FairScan">FairScan</a>.</p>
+<p align="center">A modified version of <a href="https://github.com/pynicolas/FairScan">FairScan 2.1.0</a>; DocSScaner 1.0 changes were published on July 20, 2026.</p>
 <p align="center">Source code for the RuStore version: <a href="https://github.com/Alkatrazer/DocSScaner">github.com/Alkatrazer/DocSScaner</a>.</p>
+
+See [MODIFICATIONS.md](MODIFICATIONS.md) for the modification notice, date, and summary of changes.
 
 ---
 
@@ -126,13 +128,18 @@ Related blog posts:
 
 ## Build
 
-To build an APK:
+To build a debug APK without a signing key:
+
+```bash
+./gradlew clean check assembleDebug
+```
+
+Release APKs and Android App Bundles require the private signing configuration. Keep the key and passwords outside Git and follow [RUSTORE_RELEASE.md](RUSTORE_RELEASE.md).
+
+To build a signed release after configuring the signing key:
 
 ```bash
 ./gradlew clean check assembleRelease
-```
-To build an Android App Bundle:
-```bash
 ./gradlew clean check :app:bundleRelease
 ```
 
