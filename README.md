@@ -36,7 +36,7 @@ Contributions are welcome, but please read the guidelines first: [CONTRIBUTING.m
 
 | Scan | Preview | Save & Share |
 |------|---------|--------------|
-| ![](metadata/en-US/images/phoneScreenshots/1.jpg) | ![](metadata/en-US/images/phoneScreenshots/2.jpg) | ![](metadata/en-US/images/phoneScreenshots/3.jpg) |
+| ![](metadata/en-US/images/phoneScreenshots/1.png) | ![](metadata/en-US/images/phoneScreenshots/2.png) | ![](metadata/en-US/images/phoneScreenshots/3.png) |
 
 ---
 
