@@ -1,0 +1,6 @@
+# Copy this file to release-signing.properties and keep the real file private.
+# Use an absolute path or a path relative to the project root.
+RELEASE_STORE_FILE=C:/secure/DocSScaner-release.jks
+RELEASE_STORE_PASSWORD=change-me
+RELEASE_KEY_ALIAS=docsscaner
+RELEASE_KEY_PASSWORD=change-me
