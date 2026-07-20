@@ -11,7 +11,7 @@
 
 <p align="center">Version 1.0 · Developed by <b>Alkatrazer</b></p>
 <p align="center">Based on <a href="https://github.com/pynicolas/FairScan">FairScan</a>.</p>
-<p align="center">Source code for the RuStore version: <a href="https://github.com/gholiankin2002-droid/DocSScaner">github.com/gholiankin2002-droid/DocSScaner</a>.</p>
+<p align="center">Source code for the RuStore version: <a href="https://github.com/Alkatrazer/DocSScaner">github.com/Alkatrazer/DocSScaner</a>.</p>
 
 ---
 
